@@ -17,7 +17,7 @@ export default defineComponent({});
 <style lang="sass" scoped>
 $base-color: #99CCFF
 .main
-  background: radial-gradient(blue, $base-color 70%)
+  background: radial-gradient(lighten($base-color, 15%) 0%, $base-color 70%)
   height: 200vh
   opacity: 0.75
   position: relative

@@ -19,6 +19,7 @@ export default defineComponent({
 
     onMounted(() => {
       init();
+      changeWidth();
       window.addEventListener("resize", changeWidth);
     });
 
@@ -112,8 +113,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
-.wave {
-  height: 25rem;
-}
+<style lang="sass" scoped>
+.wave
+  height: 25rem
 </style>

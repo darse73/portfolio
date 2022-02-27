@@ -22,7 +22,6 @@
           <div class="work-wrap">
             <img class="work-img" src="@/assets/MakeInfluencer.png" alt="" />
             <h3 class="work-title">MakeInfluencer</h3>
-            p
           </div>
         </div>
       </div>
@@ -44,46 +43,32 @@ $base-color: #99CCFF
   background-color: $base-color
 
 .bubble
-  background: radial-gradient($base-color 50%, white 100%)
+  background: radial-gradient(white 50%, $base-color)
   border-radius: 50%
+  margin:
+    left: 5rem
   text-align: center
 
 .works-sec
-  display: flex
-  height: 200vh
 
 .works-title-wrap
-  flex: 2
-  height: 100vh
-  position: sticky
-  top: 0
 
 .works-title
-  position: absolute
   border-radius: 50%
-  top: 50%
-  left: 50%
-  transform: translate(-50%,-50%)
-  font-size: 7rem
-  width: 30rem
-  line-height: 30rem
+  font-size: 2rem
+  width: 10rem
+  line-height: 10rem
   text-align: center
-  color: white
+  color: $base-color
 
 .works-wrap
-  height: 200vh
-  flex: 3
-  background-color: white
   text-align: center
 
 .work-wrap
-  height: 100vh
 
 .work-img
   margin: 5rem auto
   width: 40rem
-  position: sticky
-  top: 5rem
 
 .work-title
   font-size: 2rem

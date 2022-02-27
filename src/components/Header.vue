@@ -1,7 +1,9 @@
 <template>
   <div class="header">
-    <div class="title-top">DARSE</div>
-    <div class="title-bottom">Portfolio Of Kodama Yuya</div>
+    <div class="title">
+      <h1 class="title-top">DARSE</h1>
+      <h1 class="title-bottom">Portfolio Of Kodama Yuya</h1>
+    </div>
     <div class="slide"><img src="" alt="" class="slide-img" /></div>
     <Wave class="wave" />
     <div class="ship-field">
@@ -32,23 +34,21 @@ export default defineComponent({
 
 .header
   height: 100vh
-  position: relative
 
-@mixin title
-  transform: rotate(-15deg)
-  position: absolute
+.title
+  padding:
+    top: 5%
+    left: 10%
 
 .title-top
-  @include title
-  top: 31%
-  left: 14%
   font-size: 7.2rem
   letter-spacing: 0.8rem
+  transform: rotate(-15deg)
+
 .title-bottom
-  @include title
-  top: 47%
-  left: 20%
   font-size: 1.6rem
+  margin-left: 6rem
+  transform: rotate(-15deg)
 
 .slide
   border: 0.1rem solid black

@@ -116,4 +116,5 @@ export default defineComponent({
 <style lang="sass" scoped>
 .wave
   height: 25rem
+  border-bottom: 0.1rem solid white
 </style>

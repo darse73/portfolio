@@ -3,13 +3,27 @@
     <div class="contents">
       <div class="works-sec">
         <div class="works-title-wrap">
-          <div class="works-title bubble">WORKS</div>
+          <h2 class="works-title bubble">WORKS</h2>
         </div>
-        <div class="work-wrap">
-          <div class="work1-wrap">
-            <div class="work1 work bubble"><img src="" alt="" /></div>
+        <div class="works-wrap">
+          <div class="work-wrap">
+            <img class="work-img" src="@/assets/memorandum.png" alt="" />
+            <h3 class="work-title">くらげのダースが書くプログラミング備忘録</h3>
+            <div class="work-exp">
+              <p>「自分のわからなかったところを残せる」</p>
+              <p>「文章にすることで理解を深められる」</p>
+              <p>「色々な技術を試しながらサイト作りの経験ができる」</p>
+              <p>等の理由から、このような備忘録サイトを作りました。</p>
+              <p>今のところの機能としては、自分だけが投稿するという形で作っています。</p>
+              <p>また、このサイトは主にvueを使っており、firebaseに保存をしています。</p>
+              <p>コードが見たい方は、私のgithubアカウントから閲覧ください。</p>
+            </div>
           </div>
-          <div class="work2 work bubble"><img src="" alt="" /></div>
+          <div class="work-wrap">
+            <img class="work-img" src="@/assets/MakeInfluencer.png" alt="" />
+            <h3 class="work-title">MakeInfluencer</h3>
+            p
+          </div>
         </div>
       </div>
     </div>
@@ -30,7 +44,7 @@ $base-color: #99CCFF
   background-color: $base-color
 
 .bubble
-  background: radial-gradient(white 50%, $base-color 60%)
+  background: radial-gradient($base-color 50%, white 100%)
   border-radius: 50%
   text-align: center
 
@@ -39,34 +53,44 @@ $base-color: #99CCFF
   height: 200vh
 
 .works-title-wrap
-  flex: 1
+  flex: 2
   height: 100vh
   position: sticky
   top: 0
 
 .works-title
   position: absolute
+  border-radius: 50%
   top: 50%
   left: 50%
   transform: translate(-50%,-50%)
-  font-size: 5rem
+  font-size: 7rem
   width: 30rem
   line-height: 30rem
+  text-align: center
+  color: white
+
+.works-wrap
+  height: 200vh
+  flex: 3
+  background-color: white
+  text-align: center
 
 .work-wrap
-  height: 200vh
-  flex: 1
-
-.work1-wrap
   height: 100vh
 
-.work1
-  margin:
-    top: 30rem
-    right: 10%
+.work-img
+  margin: 5rem auto
+  width: 40rem
+  position: sticky
+  top: 5rem
 
-.work2
-  margin:
-    top: 60rem
-    left: 40%
+.work-title
+  font-size: 2rem
+
+.work-exp
+  margin: 3rem
+  p
+    font-size: 1.3rem
+    margin-top: 0.8rem
 </style>

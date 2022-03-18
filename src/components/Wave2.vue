@@ -1,5 +1,5 @@
 <template>
-  <div class="wave">
+  <div class="wave2">
     <canvas ref="myCanvas" :width="size.w" :height="size.h"></canvas>
   </div>
 </template>
@@ -36,7 +36,7 @@ export default defineComponent({
 
     const update = () => {
       // 各キャンバスの描画
-      draw(myCanvas, ["#6ab5ff", "#6ab5ff", "#6ab5ff"]);
+      draw(myCanvas, ["white", "white", "white"]);
 
       // 共通の描画情報の更新
       info.seconds = info.seconds + 0.01;
@@ -59,7 +59,7 @@ export default defineComponent({
       context.clearRect(0, 0, size.w, size.h);
 
       //波の重なりを描画 drawWave(canvas, color[数字（波の数を0から数えて指定）], 透過, 波の幅のzoom,波の開始位置の遅れ )
-      drawWave(canvas, color[0], 0.5, 3, 0);
+      drawWave(canvas, color[0], 1, 3, 0);
       drawWave(canvas, color[1], 0.4, 2, 250);
       drawWave(canvas, color[2], 0.2, 1.6, 100);
     };
@@ -114,6 +114,10 @@ export default defineComponent({
 </script>
 
 <style lang="sass" scoped>
-.wave
-  height: 25rem
+$base-color: #6ab5ff
+
+.wave2
+    opacity: 0.75
+    height: 25rem
+    background-color: $base-color
 </style>

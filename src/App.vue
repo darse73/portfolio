@@ -22,6 +22,14 @@ export default defineComponent({
 *
   margin: 0
   padding: 0
-  font-size: 62.5%
   font-weight: normal
+  list-style: none
+
+html
+  font-size: 62.5%
+
+p
+  letter-spacing: 0.2rem
+  font-size: 1.6rem
+  line-height: 1.8em
 </style>

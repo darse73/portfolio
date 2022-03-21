@@ -1,8 +1,8 @@
 <template>
   <div ref="headerRef" class="header">
     <div class="title">
-      <h1 class="title-t">DARSE</h1>
-      <h1 class="title-b">Portfolio Of Kodama Yuya</h1>
+      <h1 ref="titleT" class="title-t">DARSE</h1>
+      <h1 ref="titleB" class="title-b">Portfolio Of Kodama Yuya</h1>
     </div>
     <div ref="slideRef" class="slide"><img :src="slideImg" alt="" class="slide-img" /></div>
     <Wave class="wave" />
@@ -35,6 +35,7 @@ export default defineComponent({
       require("@/assets/soccer2.jpg"),
     ]);
 
+    const titleT = ref<HTMLHeadingElement>();
     const headerRef = ref<HTMLDivElement>();
     const smokeRef = ref<HTMLImageElement>();
     const slideRef = ref<HTMLDivElement>();
@@ -121,6 +122,7 @@ export default defineComponent({
     });
 
     return {
+      titleT,
       headerRef,
       slideRef,
       slideImg,
@@ -135,38 +137,41 @@ export default defineComponent({
 
 .header
   height: 100vh
-  position: relative
 
   .title
-    position: absolute
-    top: 30%
-    left: 10%
     z-index: 10
 
     .title-t
+      position: absolute
+      top: 15%
+      left: 10%
       font-size: 7.2rem
       letter-spacing: 0.8rem
-      transform: rotate(-15deg)
 
     .title-b
+      position: absolute
+      top: 70%
+      left: 60%
       font-size: 1.6rem
       margin-left: 6rem
-      transform: rotate(-15deg)
+      z-index: 1000
 
   .slide
     width: 40rem
     height: 25rem
     position: absolute
-    top: 17%
-    left: 55%
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    transform-origin: center
     overflow: hidden
     animation: slide ease-in-out var(--ani-dur)
 
     @keyframes slide
       0%
-        transform: rotateX(0)
+        transform: translate(-50%, -50%) rotateX(0)
       100%
-        transform: rotateX(-3600deg)
+        transform: translate(-50%, -50%) rotateX(-3600deg)
 
     img
       position: absolute
